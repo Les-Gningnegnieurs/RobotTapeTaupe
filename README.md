@@ -1,2 +1,2 @@
-# Bob
-Victor, Loup et Thierry
+# Robot tape-taupe
+Victor et Loup
