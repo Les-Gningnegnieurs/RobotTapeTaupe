@@ -12,5 +12,7 @@ void setup() {
 
 
 void loop() {
-  Serial.println("Hello");
+
+  printSonarValues();
+  delay(500);
 }
