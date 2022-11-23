@@ -15,3 +15,13 @@ void printSonarValues() {
     Serial.print(SONAR_GetRange(1));
     Serial.print("\n");
 }
+
+void bonk() {
+    if (getSensorProximity(0) > 200) {
+        rotate(20);
+        setServoAngle(130, SERVO_1);
+        delay(300);
+        setServoAngle(10, SERVO_1);  
+        delay(500);   
+    }
+}

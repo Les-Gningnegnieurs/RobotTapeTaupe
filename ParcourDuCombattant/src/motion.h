@@ -5,7 +5,7 @@
 #define SERVO_2 1
 #define LEFT 0
 #define RIGHT 1
-#define ROTATE_SPEED 0.2
+#define ROTATE_SPEED 0.15
 #define PULSE_PER_DEGREE 42 //To be changed
 #define MOTION_DEBUG_PRINT
 #define ENABLE_SERVO_1
@@ -24,3 +24,5 @@ void setMotorSpeed(int id, float speed);
 void rotate(int angle);
 
 void setServoAngle(int angle, int servoId);
+
+void bonk();

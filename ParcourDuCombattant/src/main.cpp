@@ -17,11 +17,14 @@ void setup() {
     SERVO_Enable(SERVO_2);
     Serial.println("Servo 2 enabled");
   #endif
+  setServoAngle(10, SERVO_1);
 }
 
 
 
 void loop() {
-  printSonarValues();
-  delay(500);
+  bonk();
+  //Serial.print(sizeof(int));
+  //Serial.print("\n");
+  delay(1000);
 }
