@@ -1,3 +1,6 @@
+#define TEST_DEBUG_PRINT
+
+#include "serial_printf.h"
 #include "fonctionsTest.h"
 #include "sensors.h"
 #include "motion.h"
@@ -17,11 +20,18 @@ void printSonarValues() {
 }
 
 void bonk() {
-    if (getSensorProximity(0) > 200) {
-        rotate(20);
-        setServoAngle(130, SERVO_1);
-        delay(300);
-        setServoAngle(10, SERVO_1);  
-        delay(500);   
+
+    for (int i = 0; i < 4; i++) {
+        if (getSensorProximity(i) >= SENSOR_PROXIMITY_THRESHOLD) {
+            #ifdef SENSOR_DEBUG_PRINT
+                SERIAL_PRINTF("Found object #%i", i);
+            #endif
+            rotate(30 - (20 * i));
+            setServoAngle(130, SERVO_1);
+            delay(300);
+            setServoAngle(10, SERVO_1);
+            rotate(-(30 - (20 * i)));
+            delay(500);
+        }
     }
 }
