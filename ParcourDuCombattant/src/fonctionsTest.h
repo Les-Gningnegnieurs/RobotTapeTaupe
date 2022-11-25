@@ -1,3 +1,7 @@
+#pragma once
+
+#define TEST_DEBUG_PRINT
+
 #define PIN_IR_1 0
 
 

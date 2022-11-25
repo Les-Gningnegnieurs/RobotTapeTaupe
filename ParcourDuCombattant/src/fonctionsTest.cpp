@@ -1,4 +1,4 @@
-#define TEST_DEBUG_PRINT
+
 
 #define threshold1 200
 #define threshold1 100

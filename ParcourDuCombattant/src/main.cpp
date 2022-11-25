@@ -2,6 +2,7 @@
 #include <LibRobus.h>
 #include "motion.h"
 #include "sensors.h"
+#include "gameHandler.h"
 #include "fonctionsTest.h"
 
 
@@ -20,13 +21,7 @@ void setup() {
   setServoAngle(10, SERVO_1);
 }
 
-
-
 void loop() {
-  bonk();
-  //rotate(-30);
-  //Serial.print(sizeof(int));
-  //Serial.print("\n");
-  //printIrValues();
-  delay(500);
+  bonkV2();
+  delay(100);
 }
