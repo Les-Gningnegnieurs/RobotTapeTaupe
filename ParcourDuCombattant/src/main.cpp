@@ -24,7 +24,9 @@ void setup() {
 
 void loop() {
   bonk();
+  //rotate(-30);
   //Serial.print(sizeof(int));
   //Serial.print("\n");
-  delay(1000);
+  //printIrValues();
+  delay(500);
 }

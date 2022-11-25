@@ -63,11 +63,11 @@ void rotate(int angle) {
     }
     else if (angle < 0) {
         #ifdef MOTION_DEBUG_PRINT
-            SERIAL_PRINTF("Starting counterclockwise rotation of %i degree(s)\n", -angle);
+            SERIAL_PRINTF("Starting counterclockwise rotation of %i degree(s)\n", angle);
         #endif
         setMotorSpeed(LEFT, -ROTATE_SPEED);
         setMotorSpeed(RIGHT, ROTATE_SPEED);
-        while (ENCODER_Read(LEFT) < (angle * PULSE_PER_DEGREE)){}
+        while (ENCODER_Read(LEFT) > (angle * PULSE_PER_DEGREE)){}
         setMotorSpeed(LEFT, 0);
         setMotorSpeed(RIGHT, 0);
         #ifdef MOTION_DEBUG_PRINT

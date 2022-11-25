@@ -7,6 +7,8 @@ int getSensorProximity(int id) {
         #endif
         return;
     }
-    SERIAL_PRINTF("Valeur lue du capteur %i est %i\n", id, ROBUS_ReadIR(id))
+    #ifdef SENSOR_DEBUG_PRINT
+        SERIAL_PRINTF("Valeur lue du capteur %i est %i\n", id, ROBUS_ReadIR(id));
+    #endif
     return ROBUS_ReadIR(id);
 }

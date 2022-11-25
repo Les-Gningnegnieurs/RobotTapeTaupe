@@ -1,7 +1,7 @@
 #pragma once
 
-#define SENSOR_DEBUG_PRINT
-#define SENSOR_PROXIMITY_THRESHOLD 200
+//#define SENSOR_DEBUG_PRINT
+#define SENSOR_PROXIMITY_THRESHOLD 250
 
 #include <Arduino.h>
 #include <Librobus.h>
