@@ -54,7 +54,7 @@ void rotate(int angle) {
         #endif
         setMotorSpeed(LEFT, ROTATE_SPEED);
         setMotorSpeed(RIGHT, -ROTATE_SPEED);
-        while (ENCODER_Read(LEFT) < (angle * PULSE_PER_DEGREE)){}
+        while (ENCODER_Read(LEFT) < (angle * PULSE_PER_DEGREE_FORWARD)){}
         setMotorSpeed(LEFT, 0);
         setMotorSpeed(RIGHT, 0);
         #ifdef MOTION_DEBUG_PRINT
@@ -67,7 +67,7 @@ void rotate(int angle) {
         #endif
         setMotorSpeed(LEFT, -ROTATE_SPEED);
         setMotorSpeed(RIGHT, ROTATE_SPEED);
-        while (ENCODER_Read(LEFT) > (angle * PULSE_PER_DEGREE)){}
+        while (ENCODER_Read(LEFT) > (angle * PULSE_PER_DEGREE_BACKWARD)){}
         setMotorSpeed(LEFT, 0);
         setMotorSpeed(RIGHT, 0);
         #ifdef MOTION_DEBUG_PRINT

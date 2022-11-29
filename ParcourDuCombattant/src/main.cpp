@@ -23,5 +23,6 @@ void setup() {
 
 void loop() {
   bonkV2();
+  //bonk();
   delay(100);
 }
