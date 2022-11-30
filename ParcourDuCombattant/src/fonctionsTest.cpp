@@ -12,12 +12,19 @@
 #include <Arduino.h>
 #include <LibRobus.h>
 
+void printEncoderValues() {
+    int encoder1 = ENCODER_Read(1);
+    int encoder0 = ENCODER_Read(0);
+    SERIAL_PRINTF("Encodeur gauche: %i Encodeur droite: %i\n", encoder0, encoder1);
+    //SERIAL_PRINTF("Encodeur gauche: %i Encodeur droite: %i\n", ENCODER_Read(0), ENCODER_Read(1));
+}
+
 int exempleFonction(int variable1, int variable2) {
     return variable1 * variable2;
 }
 
 void printIrValues() {
-    SERIAL_PRINTF("IR 1: %i IR 2: %i IR 3: %i IR 4: %i\n", getSensorProximity(0), getSensorProximity(1), getSensorProximity(2), getSensorProximity(3));
+    SERIAL_PRINTF("IR 1: %i     IR 2: %i        IR 3: %i        IR 4: %i\n", getSensorProximity(0), getSensorProximity(1), getSensorProximity(2), getSensorProximity(3));
 }
 
 void bonk() {

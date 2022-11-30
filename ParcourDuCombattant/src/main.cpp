@@ -22,7 +22,10 @@ void setup() {
 }
 
 void loop() {
+
+  //SERIAL_PRINTF("%i \n", getSensorProximity(1));
+  //printIrValues();
   bonkV2();
-  //bonk();
-  delay(100);
+
+  delay(500);
 }
