@@ -18,3 +18,7 @@ void move();
 void printSonarValues();
 
 void printIrValues();
+
+void testRotate();
+
+void testCounterRotate();

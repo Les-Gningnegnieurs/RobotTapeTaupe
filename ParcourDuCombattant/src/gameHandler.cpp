@@ -12,9 +12,9 @@ void bonkV2() {
             //rotate(anglesTaupe[i]);
             //setServoAngle(130, SERVO_1);
             //delay(300);  //Le delay(300) laisse le temps au servo d'atteindre l'angle désiré, ne pas l'enlever
-            //setServoAngle(10, SERVO_1);    
-           // rotate(-anglesTaupe[i]); 
-           //SERIAL_PRINTF("Found mole #%i", i);     
+            //setServoAngle(10, SERVO_1); 
+            //if(anglesTaupe[i] est tourne droite)   
+            //rotate(-anglesTaupe[i]-1);      
         }
     }
 }

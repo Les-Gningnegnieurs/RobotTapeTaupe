@@ -68,3 +68,25 @@ void bonk() {
         }
     }
 }
+
+void testRotate() {
+    resetEncoders();
+    setMotorSpeed(LEFT, 0.2);
+    setMotorSpeed(RIGHT, -0.2);
+    delay(4000);
+    setMotorSpeed(LEFT, 0);
+    setMotorSpeed(RIGHT, 0);
+    printEncoderValues();
+    resetEncoders();
+}
+
+void testCounterRotate() {
+    resetEncoders();
+    setMotorSpeed(LEFT, -0.2);
+    setMotorSpeed(RIGHT, 0.2);
+    delay(4000);
+    setMotorSpeed(LEFT, 0);
+    setMotorSpeed(RIGHT, 0);
+    printEncoderValues();
+    resetEncoders();
+}
