@@ -25,11 +25,11 @@ void loop() {
 
   //SERIAL_PRINTF("%i \n", getSensorProximity(1));
   //printIrValues();
-  //bonkV2();
+  bonkV2();
   //testRotate();
-  rotate(-30);
-  delay(500);
+  //rotate(-30);
+  //delay(500);
   //testCounterRotate();
-  rotate(30);
-  delay(600);
+  //rotate(30);
+  delay(400);
 }
